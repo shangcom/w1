@@ -28,4 +28,14 @@ public enum TodoService { //enum(열거형)은 명시적으로 인스턴스가 �
         }).collect(Collectors.toList()); //스트림에서 생성된 객체들을 리스트로 수집
         return todoDTOS;
     }
+
+    public TodoDTO get(Long tno) {
+        TodoDTO dto = new TodoDTO();
+        dto.setTno(tno);
+        dto.setTitle("Sample Todo");
+        dto.setDueDate(LocalDate.now());
+        dto.setFinished(true);
+
+        return dto;
+    }
 }

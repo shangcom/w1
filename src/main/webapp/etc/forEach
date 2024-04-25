@@ -1,0 +1,27 @@
+<%--
+<c:forEach> 태그의 items 속성은 반복을 수행할 컬렉션 또는 배열을 지정하는 데 사용됨.
+items 속성이 가리킬 수 있는 조건 또는 유형들 : 컬렉션, 배열, map
+
+컬렉션: 자바의 Collection 인터페이스를 구현하는 모든 클래스(예: ArrayList, HashSet 등)는 items 속성에 사용할 수 있음.
+이 컬렉션들은 객체들의 순차적인 집합을 제공하며, <c:forEach> 태그는 이들 컬렉션의 각 요소를 순회할 수 있다.
+
+<c:forEach var="item" items="${list}">
+    <!-- list는 ArrayList<TodoDTO> 형태의 객체 -->
+    ${item.property}
+</c:forEach>
+
+배열: 모든 유형의 배열(예: Object[], int[], String[] 등)도 items 속성에 사용 가능. 배열의 각 요소에 대해 반복 작업을 수행함.
+
+<c:forEach var="item" items="${list}">
+    <!-- list는 ArrayList<TodoDTO> 형태의 객체 -->
+    ${item.property}
+</c:forEach>
+
+Map: 자바의 Map 인터페이스를 구현하는 객체들도 사용될 수 있으나, 일반적으로 <c:forEach>는 Map의 키(key) 또는 값(value)의 집합에 대해 반복을 수행함.
+이 경우 Map의 entrySet(), keySet() 또는 values() 메소드를 사용하여 반복할 요소의 집합을 지정해야 함.
+
+<c:forEach var="entry" items="${map.entrySet()}">
+    Key: ${entry.key}, Value: ${entry.value}
+</c:forEach>
+
+--%>
